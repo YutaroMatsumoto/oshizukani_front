@@ -1,12 +1,14 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import { Children } from "react";
+import { BaseTemplate } from "src/components/templates/BaseTemplate";
+// 必要があればtwin.macroを導入してみる
+// import "twin.macro";
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
-    <div>
-      <div className="font-black">aiueo</div>
-    </div>
+    <BaseTemplate>
+      <div className="h-full">aaa</div>
+    </BaseTemplate>
   );
 };
 
