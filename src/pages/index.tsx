@@ -7,7 +7,7 @@ import { BaseTemplate } from "src/components/templates/BaseTemplate";
 const Home = () => {
   return (
     <BaseTemplate>
-      <div className="h-full">aaa</div>
+      <div className="h-full"></div>
     </BaseTemplate>
   );
 };
