@@ -5,7 +5,11 @@ import { BaseTemplate } from "src/components/templates/BaseTemplate";
 // import "twin.macro";
 
 const Home = () => {
-  return <BaseTemplate>{/* <div className="h-full"></div> */}</BaseTemplate>;
+  return (
+    <BaseTemplate>
+      <div className="h-full"></div>
+    </BaseTemplate>
+  );
 };
 
 export default Home;
