@@ -1,3 +1,5 @@
+import "twin.macro";
+
 interface Props {
   width?: string;
   height?: string;
@@ -7,13 +9,13 @@ interface Props {
 
 export const Button = ({ auth, color, width, height }: Props) => {
   return (
-    // <button className="w-20 h-9 rounded-lg border-2 border-white bg-green-400 ">
-    //   <span className="font-black text-white">
+    // <button tw="w-20 h-9 rounded-lg border-2 border-white bg-green-400 ">
+    //   <span tw="font-black text-white">
     //     {auth ? "ログアウト" : "ログイン"}
     //   </span>
     // </button>
-    <button className="w-20 h-9 rounded-lg border-2 border-green-400 bg-white ">
-      <span className="font-black text-green-400">
+    <button tw="w-20 h-9 rounded-lg border-2 border-green-400 bg-white ">
+      <span tw="font-black text-green-400">
         {auth ? "ログアウト" : "ログイン"}
       </span>
     </button>
