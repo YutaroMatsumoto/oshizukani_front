@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
+import "twin.macro";
 import { Footer } from "src/components/organisms/Footer";
 import { Header } from "src/components/organisms/Header";
 
@@ -7,10 +8,28 @@ interface Props {
 }
 
 export const BaseTemplate = ({ children }: React.PropsWithChildren<Props>) => {
+  const [state, setState] = useState(0);
+  console.log("aiueo");
+  const a = "aiueo";
+  const b = () => {
+    console.log("sasisuseso");
+  };
+  console.log("aを表示", a);
+  const testMemo = useMemo(() => {
+    console.log("kakikukeko");
+    return state;
+  }, [state]);
+  console.log("stateを表示：", state);
+  console.log("testmemoを表示：", testMemo);
+
   return (
-    <div className="h-full bg-gray-100">
+    <div tw="h-full bg-gray-100">
       <Header />
-      <div className="pt-16 h-full">{children}</div>
+      <div tw="pt-16 h-full">
+        {children}
+        <button onClick={() => setState(state + 1)}>テスト</button>
+      </div>
+
       <Footer />
     </div>
   );
