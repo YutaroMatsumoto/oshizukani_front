@@ -17,7 +17,10 @@ export const Header = () => {
         <Tab />
       </div>
       <div tw="flex items-center mr-10">
-        <Button auth={auth} />
+        <Button
+          auth={auth}
+          onClick={() => console.log("ログイン・ログアウトボタン")}
+        />
       </div>
     </header>
   );
