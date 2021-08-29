@@ -11,7 +11,7 @@ interface Props {
 export const TabItem = ({ content, href, active }: Props) => {
   return (
     <Link href={href}>
-      <div css={[active && tw`text-red-600`]}>{content}</div>
+      <div css={[active && tw`text-green-400`]}>{content}</div>
     </Link>
   );
 };
