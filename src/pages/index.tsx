@@ -1,11 +1,17 @@
+import "twin.macro";
 import type { NextPage } from "next";
-import { Children } from "react";
+import { Children, useState } from "react";
 import { BaseTemplate } from "src/components/templates/BaseTemplate";
+import { NowMtg } from "src/components/molecules/NowMtg";
 // 必要があればtwin.macroを導入してみる
 // import "twin.macro";
 
 const Home = () => {
-  return <BaseTemplate />;
+  const [isMtg, setIsMtg] = useState(true);
+  console.log(isMtg);
+  return (
+    <BaseTemplate>{isMtg ? <NowMtg /> : <div>あいうえお</div>}</BaseTemplate>
+  );
 };
 
 export default Home;

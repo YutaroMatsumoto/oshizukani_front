@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from "react";
 import "twin.macro";
+import React, { useMemo, useState } from "react";
 import { Footer } from "src/components/organisms/Footer";
 import { Header } from "src/components/organisms/Header";
 
@@ -27,7 +27,7 @@ export const BaseTemplate = ({ children }: React.PropsWithChildren<Props>) => {
       <Header />
       <div tw="pt-16 h-full">
         {children}
-        <button onClick={() => setState(state + 1)}>テスト</button>
+        {/* <button onClick={() => setState(state + 1)}>テスト</button> */}
       </div>
 
       <Footer />
