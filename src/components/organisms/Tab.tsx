@@ -24,6 +24,9 @@ export const Tab = ({}: Props) => {
       case "/week":
         setTabNum(3);
         break;
+      // case "/createSchedule":
+      //   setTabNum(4);
+      //   break;
       default:
         setTabNum(0);
         break;
@@ -40,6 +43,13 @@ export const Tab = ({}: Props) => {
       <div tw="ml-8 cursor-pointer">
         <TabItem content="Week" href="week" active={tabNum === 3} />
       </div>
+      {/* <div tw="ml-14 cursor-pointer">
+        <TabItem
+          content="予定の作成"
+          href="createSchedule"
+          active={tabNum === 4}
+        />
+      </div> */}
     </div>
   );
 };
