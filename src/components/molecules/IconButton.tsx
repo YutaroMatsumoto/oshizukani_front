@@ -35,7 +35,7 @@ export const IconButton = ({
   return (
     <>
       {showModal && (
-        <div tw="fixed top-0 left-0 flex items-center justify-center w-full h-full z-10 bg-opacity-75">
+        <div tw="fixed top-0 left-0 flex items-center justify-center w-full h-full z-10">
           <div
             tw="absolute bg-black bg-opacity-50 inset-0"
             onClick={onClick}
