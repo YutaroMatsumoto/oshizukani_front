@@ -7,7 +7,6 @@ export const IconType = {
   TEST: "test",
 } as const;
 type IconType = typeof IconType[keyof typeof IconType];
-console.log(IconType);
 
 interface Props {
   type: IconType;
