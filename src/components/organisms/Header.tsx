@@ -3,10 +3,11 @@ import { Button } from "src/components/molecules/Button";
 import { Tab } from "src/components/organisms/Tab";
 import { IconButton, IconType } from "src/components/molecules/IconButton";
 import { useState } from "react";
+import { Modal } from "src/components/organisms/Modal";
 
 export const Header = () => {
   const auth = true; // 暫定対応
-  const [showSettingModal, setshowSettingModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <header tw="flex items-center py-4 w-full h-16 fixed bg-white">
@@ -26,12 +27,12 @@ export const Header = () => {
             type={IconType.SETTING}
             color="#065f46"
             size={25}
-            showModal={showSettingModal}
-            onClick={() => setshowSettingModal(!showSettingModal)}
+            onClick={() => setShowModal(!showModal)}
           />
         ) : (
           <Button text="ログイン" onClick={() => console.log("Login")} />
         )}
+        {showModal && <Modal onClick={() => setShowModal(!showModal)} />}
       </div>
     </header>
   );
