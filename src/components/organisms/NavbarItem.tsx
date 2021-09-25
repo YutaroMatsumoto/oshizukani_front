@@ -10,7 +10,7 @@ interface Props {
 export const NavbarItem = ({ content, icon, onClick }: Props) => {
   return (
     <div
-      tw="flex items-center px-3.5 py-1.5 cursor-pointer hover:bg-gray-300"
+      tw="flex items-center px-3.5 py-1.5 cursor-pointer hover:bg-green-200"
       onClick={onClick}
     >
       {icon}
