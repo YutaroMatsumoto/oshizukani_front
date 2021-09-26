@@ -11,9 +11,7 @@ export const Modal = ({ onClick }: Props) => {
       <div tw="absolute bg-black bg-opacity-50 inset-0" onClick={onClick}></div>
       <div tw="h-2/3 w-1/2 z-10 bg-white cursor-default rounded-md">
         <div tw="flex h-full">
-          <div tw="w-48 bg-gray-100 rounded-l-md">
-            <Navbar />
-          </div>
+          <Navbar />
         </div>
       </div>
     </div>

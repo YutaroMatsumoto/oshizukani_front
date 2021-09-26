@@ -7,7 +7,7 @@ import { RiLogoutBoxRLine } from "react-icons/ri";
 
 export const Navbar = () => {
   return (
-    <div tw="pt-2.5">
+    <div tw="w-48 pt-2.5 bg-gray-100 rounded-l-md">
       <NavbarItem
         content="通知"
         icon={<IoMdNotificationsOutline size={20} />}
