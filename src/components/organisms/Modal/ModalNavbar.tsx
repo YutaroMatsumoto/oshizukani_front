@@ -1,11 +1,11 @@
 import "twin.macro";
-import { NavbarItem } from "src/components/organisms/NavbarItem";
+import { NavbarItem } from "src/components/organisms/Modal/NavbarItem";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { BiCalendarPlus } from "react-icons/bi";
 import { BsPeople } from "react-icons/bs";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 
-export const Navbar = () => {
+export const ModalNavbar = () => {
   return (
     <div tw="w-48 pt-2.5 bg-gray-100 rounded-l-md">
       <NavbarItem

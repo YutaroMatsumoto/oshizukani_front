@@ -3,7 +3,7 @@ import { Button } from "src/components/molecules/Button";
 import { Tab } from "src/components/organisms/Tab";
 import { IconButton, IconType } from "src/components/molecules/IconButton";
 import { useState } from "react";
-import { Modal } from "src/components/organisms/Modal";
+import { Modal } from "src/components/organisms/Modal/Modal";
 
 export const Header = () => {
   const auth = true; // 暫定対応

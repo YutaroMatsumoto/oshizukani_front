@@ -1,5 +1,6 @@
-import { Navbar } from "src/components/organisms/Navbar";
 import "twin.macro";
+import { ModalNavbar } from "src/components/organisms/Modal/ModalNavbar";
+import { ModalContent } from "src/components/organisms/Modal/ModalContent";
 
 interface Props {
   onClick: () => void;
@@ -11,7 +12,8 @@ export const Modal = ({ onClick }: Props) => {
       <div tw="absolute bg-black bg-opacity-50 inset-0" onClick={onClick}></div>
       <div tw="h-2/3 w-1/2 z-10 bg-white cursor-default rounded-md">
         <div tw="flex h-full">
-          <Navbar />
+          <ModalNavbar />
+          <ModalContent onClick={() => console.log("modal content")} />
         </div>
       </div>
     </div>
