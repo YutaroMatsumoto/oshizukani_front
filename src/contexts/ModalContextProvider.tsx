@@ -22,10 +22,11 @@ const initialState: ModalState = {
 
 export const ModalContext = createContext<ModalState>(initialState);
 
-// export const ModalContextProvider = ({ children }: Props) => {
-//   return (
-//     <ModalContext.Provider value={initialState}>
-//       {children}
-//     </ModalContext.Provider>
-//   );
-// };
+// なぜProviderは必要になるのか？
+export const ModalContextProvider = ({ children }: Props) => {
+  return (
+    <ModalContext.Provider value={initialState}>
+      {children}
+    </ModalContext.Provider>
+  );
+};
