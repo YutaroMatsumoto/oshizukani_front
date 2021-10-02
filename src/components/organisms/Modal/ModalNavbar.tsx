@@ -4,29 +4,48 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { BiCalendarPlus } from "react-icons/bi";
 import { BsPeople } from "react-icons/bs";
 import { RiLogoutBoxRLine } from "react-icons/ri";
+import {
+  ModalContentState,
+  ModalContentStateType,
+  ModalContentStateLabel,
+} from "src/models/modal";
 
-export const ModalNavbar = () => {
+interface Props {
+  onClick: (type: ModalContentStateType) => void;
+}
+
+export const ModalNavbar = ({ onClick }: Props) => {
   return (
     <div tw="w-48 pt-2.5 bg-gray-100 rounded-l-md">
       <NavbarItem
-        content="通知"
+        content={ModalContentStateLabel.account}
+        contentType={ModalContentState.ACCOUNT}
         icon={<IoMdNotificationsOutline size={20} />}
-        onClick={() => console.log("Tab：通知")}
+        onClick={() => onClick(ModalContentState.ACCOUNT)}
       />
       <NavbarItem
-        content="予定作成"
+        content={ModalContentStateLabel.notification}
+        contentType={ModalContentState.NOTIFICATION}
+        icon={<IoMdNotificationsOutline size={20} />}
+        onClick={() => onClick(ModalContentState.NOTIFICATION)}
+      />
+      <NavbarItem
+        content={ModalContentStateLabel.createSchedule}
+        contentType={ModalContentState.CREATESCHEDULE}
         icon={<BiCalendarPlus size={20} />}
-        onClick={() => console.log("Tab：予定作成")}
+        onClick={() => onClick(ModalContentState.CREATESCHEDULE)}
       />
       <NavbarItem
-        content="メンバー"
+        content={ModalContentStateLabel.member}
+        contentType={ModalContentState.MEMBER}
         icon={<BsPeople size={20} />}
-        onClick={() => console.log("Tab：メンバー")}
+        onClick={() => onClick(ModalContentState.MEMBER)}
       />
       <NavbarItem
-        content="ログアウト"
+        content={ModalContentStateLabel.logout}
+        contentType={ModalContentState.LOGOUT}
         icon={<RiLogoutBoxRLine size={20} />}
-        onClick={() => console.log("Tab：ログアウト")}
+        onClick={() => onClick(ModalContentState.LOGOUT)}
       />
     </div>
   );
