@@ -1,13 +1,19 @@
 import "twin.macro";
+import { useContext, useCallback } from "react";
 import { Button } from "src/components/molecules/Button";
 import { Tab } from "src/components/organisms/Tab";
 import { IconButton, IconType } from "src/components/molecules/IconButton";
-import { useState } from "react";
 import { Modal } from "src/components/organisms/Modal/Modal";
+import {
+  ModalContext,
+  useModalDispatchContext,
+} from "src/contexts/ModalContextProvider";
 
 export const Header = () => {
   const auth = true; // 暫定対応
-  const [showModal, setShowModal] = useState(false);
+  const context = useContext(ModalContext);
+  const modalDispatch = useModalDispatchContext();
+  const showAccount = useCallback(() => modalDispatch({ type: "account" }), []);
 
   return (
     <header tw="flex items-center py-4 w-full h-16 fixed bg-white">
@@ -27,12 +33,12 @@ export const Header = () => {
             type={IconType.SETTING}
             color="#065f46"
             size={25}
-            onClick={() => setShowModal(!showModal)}
+            onClick={showAccount}
           />
         ) : (
           <Button text="ログイン" onClick={() => console.log("Login")} />
         )}
-        {showModal && <Modal onClick={() => setShowModal(!showModal)} />}
+        {context.visible && <Modal />}
       </div>
     </header>
   );

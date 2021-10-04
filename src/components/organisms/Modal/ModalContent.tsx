@@ -1,23 +1,22 @@
 import "twin.macro";
-import { useContext } from "react";
+import { useMemo, useContext } from "react";
 import { ModalContext } from "src/contexts/ModalContextProvider";
-import { useMemo } from "react";
 import { AccountModal } from "src/components/organisms/Modal/ModalContents/AccountModal";
 import { NotificationModal } from "src/components/organisms/Modal/ModalContents/NotificationModal";
 import { CreateScheduleModal } from "src/components/organisms/Modal/ModalContents/CreateScheduleModal";
 import { MemberModal } from "src/components/organisms/Modal/ModalContents/MemberModal";
 import { LogoutModal } from "src/components/organisms/Modal/ModalContents/LogoutModal";
-import { ModalContentState, ModalContentStateType } from "src/models/modal";
+import { ModalContentState } from "src/contexts/ModalContextProvider";
 
 interface Props {
-  type: ModalContentStateType | "";
   onClick?: () => void;
 }
 
-export const ModalContent = ({ type, onClick }: Props) => {
-  // const context = useContext(ModalContext);
+export const ModalContent = ({ onClick }: Props) => {
+  const context = useContext(ModalContext);
+
   const contentType = useMemo(() => {
-    switch (type) {
+    switch (context.type) {
       case ModalContentState.ACCOUNT:
         return <AccountModal />;
       case ModalContentState.NOTIFICATION:
@@ -32,10 +31,10 @@ export const ModalContent = ({ type, onClick }: Props) => {
       default:
         return;
     }
-  }, [type]);
+  }, [context]);
   return (
     <div tw="w-full pt-6 px-14">
-      <div>{contentType}</div>
+      <div tw="cursor-pointer">{contentType}</div>
     </div>
   );
 };
