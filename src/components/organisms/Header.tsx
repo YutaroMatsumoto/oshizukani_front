@@ -13,7 +13,7 @@ export const Header = () => {
   const auth = true; // 暫定対応
   const context = useContext(ModalContext);
   const modalDispatch = useModalDispatchContext();
-  const showAccount = useCallback(() => modalDispatch({ type: "account" }), []);
+  const showMember = useCallback(() => modalDispatch({ type: "member" }), []);
 
   return (
     <header tw="flex items-center py-4 w-full h-16 fixed bg-white">
@@ -33,7 +33,7 @@ export const Header = () => {
             type={IconType.SETTING}
             color="#065f46"
             size={25}
-            onClick={showAccount}
+            onClick={showMember}
           />
         ) : (
           <Button text="ログイン" onClick={() => console.log("Login")} />

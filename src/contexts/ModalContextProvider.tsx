@@ -2,7 +2,6 @@ import React, { createContext, Dispatch, useContext, useReducer } from "react";
 
 export const ModalContentState = {
   DEFAULT: "",
-  ACCOUNT: "account",
   NOTIFICATION: "notification",
   CREATESCHEDULE: "createSchedule",
   MEMBER: "member",
@@ -12,7 +11,6 @@ export type ModalContentStateType =
   typeof ModalContentState[keyof typeof ModalContentState];
 
 export const ModalContentStateLabel = {
-  account: "アカウント",
   notification: "通知",
   createSchedule: "予定作成",
   member: "メンバー",
@@ -37,7 +35,6 @@ const initialState: ModalContentTypeState = {
 
 type ModalContextAction =
   | { type: "default" }
-  | { type: "account" }
   | { type: "notification" }
   | { type: "createSchedule" }
   | { type: "member" }
@@ -50,11 +47,6 @@ const reducer = (state: ModalContentTypeState, action: ModalContextAction) => {
       return {
         visible: true,
         type: ModalContentState.DEFAULT,
-      };
-    case "account":
-      return {
-        visible: true,
-        type: ModalContentState.ACCOUNT,
       };
     case "notification":
       return {

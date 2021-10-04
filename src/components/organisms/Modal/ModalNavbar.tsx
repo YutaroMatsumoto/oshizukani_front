@@ -14,35 +14,27 @@ import { useModalDispatchContext } from "src/contexts/ModalContextProvider";
 export const ModalNavbar = () => {
   const modalDispatch = useModalDispatchContext();
 
-  const showAccount = useCallback(() => modalDispatch({ type: "account" }), []);
-
-  const showNotification = useCallback(
-    () => modalDispatch({ type: "notification" }),
-    []
-  );
+  const showMember = useCallback(() => modalDispatch({ type: "member" }), []);
 
   const showCreateSchedule = useCallback(
     () => modalDispatch({ type: "createSchedule" }),
     []
   );
 
-  const showMember = useCallback(() => modalDispatch({ type: "member" }), []);
+  const showNotification = useCallback(
+    () => modalDispatch({ type: "notification" }),
+    []
+  );
 
   const showLogout = useCallback(() => modalDispatch({ type: "logout" }), []);
 
   return (
     <div tw="w-48 pt-2.5 bg-gray-100 rounded-l-md">
       <NavbarItem
-        content={ModalContentStateLabel.account}
-        contentType={ModalContentState.ACCOUNT}
-        icon={<IoMdNotificationsOutline size={20} />}
-        onClick={showAccount}
-      />
-      <NavbarItem
-        content={ModalContentStateLabel.notification}
-        contentType={ModalContentState.NOTIFICATION}
-        icon={<IoMdNotificationsOutline size={20} />}
-        onClick={showNotification}
+        content={ModalContentStateLabel.member}
+        contentType={ModalContentState.MEMBER}
+        icon={<BsPeople size={20} />}
+        onClick={showMember}
       />
       <NavbarItem
         content={ModalContentStateLabel.createSchedule}
@@ -51,10 +43,10 @@ export const ModalNavbar = () => {
         onClick={showCreateSchedule}
       />
       <NavbarItem
-        content={ModalContentStateLabel.member}
-        contentType={ModalContentState.MEMBER}
-        icon={<BsPeople size={20} />}
-        onClick={showMember}
+        content={ModalContentStateLabel.notification}
+        contentType={ModalContentState.NOTIFICATION}
+        icon={<IoMdNotificationsOutline size={20} />}
+        onClick={showNotification}
       />
       <NavbarItem
         content={ModalContentStateLabel.logout}
