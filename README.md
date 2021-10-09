@@ -33,24 +33,34 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-##　追加したい機能
-webpush 機能
+# 追加したい機能
 
-## カレンダー機能
+- webpush 機能
+- カレンダー機能
 
-### 実現したいこと
+### 実現したいこと（vision 的なこと）
 
 - まずはこのアプリ内で予定を管理する
 - 将来的に Google Calendar と連携
+  </br>
+  </br>
 
-### ライブラリ候補
+# ライブラリ候補
 
-#### カレンダー
+## カレンダー
 
 - react-calendar
 - FullCalendar（今回採用）
 
-#### form
+## form
 
 - react-hook-form（今回採用予定）
 - react-final-form
+
+</br>
+</br>
+
+# Git 運用ルール
+
+- gitmoji を利用
+- gitmoji を利用しない場合は add, modify, fix などのタグをつける
