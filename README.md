@@ -45,5 +45,12 @@ webpush 機能
 
 ### ライブラリ候補
 
+#### カレンダー
+
 - react-calendar
-- FullCalendar
+- FullCalendar（今回採用）
+
+#### form
+
+- react-hook-form（今回採用予定）
+- react-final-form
