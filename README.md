@@ -35,3 +35,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ##　追加したい機能
 webpush 機能
+
+## カレンダー機能
+
+### 実現したいこと
+
+- まずはこのアプリ内で予定を管理する
+- 将来的に Google Calendar と連携
+
+### ライブラリ候補
+
+- react-calendar
+- FullCalendar
