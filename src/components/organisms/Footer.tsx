@@ -1,5 +1,4 @@
 import "twin.macro";
-import { Button } from "src/components/molecules/Button";
 
 export const Footer = () => {
   const auth = false; // 暫定対応

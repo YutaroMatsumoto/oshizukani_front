@@ -30,7 +30,7 @@ export const BaseTemplate = ({ children }: React.PropsWithChildren<Props>) => {
         {/* <button onClick={() => setState(state + 1)}>テスト</button> */}
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
