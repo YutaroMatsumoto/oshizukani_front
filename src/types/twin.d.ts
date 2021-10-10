@@ -1,9 +1,22 @@
 import "twin.macro";
-import styledImport from "@emotion/styled";
-// import styledImport from "styled-component";
-import { css as cssImport } from "@emotion/react";
+import styledImport, { CSSProp, css as cssImport } from "styled-components";
 
 declare module "twin.macro" {
   const styled: typeof styledImport;
   const css: typeof cssImport;
+}
+
+declare module "react" {
+  interface HTMLAttributes<T> extends DOMAttributes<T> {
+    css?: CSSProp;
+  }
+}
+
+// The 'as' prop on styled components
+declare global {
+  namespace JSX {
+    interface IntrinsicAttributes<T> extends DOMAttributes<T> {
+      as?: string;
+    }
+  }
 }
