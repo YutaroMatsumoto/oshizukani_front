@@ -1,16 +1,22 @@
 import "twin.macro";
 import React from "react";
-import FullCalendar from "@fullcalendar/react"; // must go before plugins
-import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
-import "@fullcalendar/common/main.css";
-import "@fullcalendar/daygrid/main.css";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import moment from "moment";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 
 import { BaseTemplate } from "src/components/templates/BaseTemplate";
+const localizer = momentLocalizer(moment);
 
 const Day = () => {
   return (
     <BaseTemplate>
-      <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" />
+      <Calendar
+        localizer={localizer}
+        // events={myEventsList}
+        startAccessor="start"
+        endAccessor="end"
+        style={{ height: 500 }}
+      />
     </BaseTemplate>
   );
 };

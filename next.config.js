@@ -3,12 +3,12 @@ module.exports = {
   reactStrictMode: true,
 };
 
-const withTM = require("next-transpile-modules")([
-  "@fullcalendar/common",
-  "@fullcalendar/daygrid",
-  "@fullcalendar/react",
-]);
+// const withTM = require("next-transpile-modules")([
+//   "@fullcalendar/common",
+//   "@fullcalendar/daygrid",
+//   "@fullcalendar/react",
+// ]);
 
-module.exports = withTM({
-  reactStrictMode: true,
-});
+// module.exports = withTM({
+//   reactStrictMode: true,
+// });
