@@ -9,9 +9,14 @@ import {
   ModalContentState,
   ModalContentStateLabel,
 } from "src/contexts/ModalContextProvider";
-import { useModalDispatchContext } from "src/contexts/ModalContextProvider";
+import {
+  useModalDispatchContext,
+  ModalContext,
+} from "src/contexts/ModalContextProvider";
+import { useContext } from "react";
 
 export const ModalNavbar = () => {
+  const modalType = useContext(ModalContext);
   const modalDispatch = useModalDispatchContext();
 
   const showMember = useCallback(() => modalDispatch({ type: "member" }), []);
@@ -32,25 +37,29 @@ export const ModalNavbar = () => {
     <div tw="w-48 pt-2.5 bg-gray-100 rounded-l-md">
       <NavbarItem
         content={ModalContentStateLabel.member}
-        contentType={ModalContentState.MEMBER}
+        // contentType={ModalContentState.MEMBER}
+        active={modalType.type === ModalContentState.MEMBER}
         icon={<BsPeople size={20} />}
         onClick={showMember}
       />
       <NavbarItem
         content={ModalContentStateLabel.createSchedule}
-        contentType={ModalContentState.CREATESCHEDULE}
+        // contentType={ModalContentState.CREATESCHEDULE}
+        active={modalType.type === ModalContentState.CREATESCHEDULE}
         icon={<BiCalendarPlus size={20} />}
         onClick={showCreateSchedule}
       />
       <NavbarItem
         content={ModalContentStateLabel.notification}
-        contentType={ModalContentState.NOTIFICATION}
+        // contentType={ModalContentState.NOTIFICATION}
+        active={modalType.type === ModalContentState.NOTIFICATION}
         icon={<IoMdNotificationsOutline size={20} />}
         onClick={showNotification}
       />
       <NavbarItem
         content={ModalContentStateLabel.logout}
-        contentType={ModalContentState.LOGOUT}
+        // contentType={ModalContentState.LOGOUT}
+        active={modalType.type === ModalContentState.LOGOUT}
         icon={<RiLogoutBoxRLine size={20} />}
         onClick={showLogout}
       />
