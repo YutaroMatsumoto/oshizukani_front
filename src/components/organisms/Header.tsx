@@ -16,7 +16,7 @@ export const Header = () => {
   const showMember = useCallback(() => modalDispatch({ type: "member" }), []);
 
   return (
-    <header tw="flex items-center py-4 w-full h-16 fixed bg-white">
+    <header tw="flex items-center py-4 w-full h-16 fixed bg-white z-10">
       <div
         tw="flex items-center ml-10 font-black text-green-400 cursor-pointer"
         onClick={() => console.log("Click Logo")}
