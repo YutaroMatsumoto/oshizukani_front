@@ -40,10 +40,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ### 実現したいこと（vision 的なこと）
 
-- まずはこのアプリ内で予定を管理する
 - 将来的に Google Calendar と連携
 - 今会議かどうかだけをわかれば良い
 - 最初は google だけでも
+- 会議がない場合のレイアウト作成
+  </br>
+
+- まずはこのアプリ内で予定を管理する ← 将来的に実装の可能性あり
   </br>
   </br>
 
