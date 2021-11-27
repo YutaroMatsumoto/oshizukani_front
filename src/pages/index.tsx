@@ -3,8 +3,6 @@ import type { NextPage } from "next";
 import { Children, useState } from "react";
 import { BaseTemplate } from "src/components/templates/BaseTemplate";
 import { NowMtg } from "src/components/molecules/NowMtg";
-// 必要があればtwin.macroを導入してみる
-// import "twin.macro";
 
 const Home = () => {
   const [isMtg, setIsMtg] = useState(true);
