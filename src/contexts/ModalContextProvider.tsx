@@ -12,7 +12,7 @@ export type ModalContentStateType =
 
 export const ModalContentStateLabel = {
   notification: "通知",
-  createSchedule: "予定作成",
+  // createSchedule: "予定作成",
   member: "メンバー",
   logout: "ログアウト",
 } as const;
@@ -53,11 +53,11 @@ const reducer = (state: ModalContentTypeState, action: ModalContextAction) => {
         visible: true,
         type: ModalContentState.NOTIFICATION,
       };
-    case "createSchedule":
-      return {
-        visible: true,
-        type: ModalContentState.CREATESCHEDULE,
-      };
+    // case "createSchedule":
+    //   return {
+    //     visible: true,
+    //     type: ModalContentState.CREATESCHEDULE,
+    //   };
     case "member":
       return {
         visible: true,

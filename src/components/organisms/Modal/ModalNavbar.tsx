@@ -42,13 +42,13 @@ export const ModalNavbar = () => {
         icon={<BsPeople size={20} />}
         onClick={showMember}
       />
-      <NavbarItem
+      {/* <NavbarItem
         content={ModalContentStateLabel.createSchedule}
         // contentType={ModalContentState.CREATESCHEDULE}
         active={modalType.type === ModalContentState.CREATESCHEDULE}
         icon={<BiCalendarPlus size={20} />}
         onClick={showCreateSchedule}
-      />
+      /> */}
       <NavbarItem
         content={ModalContentStateLabel.notification}
         // contentType={ModalContentState.NOTIFICATION}
