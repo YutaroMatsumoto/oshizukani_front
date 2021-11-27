@@ -23,7 +23,7 @@ export const Header = () => {
       >
         oshizukani
       </div>
-      {/* TODO: 将来的に必要になったら入れる */}
+      {/* TODO: Tab機能は将来的に必要になったら入れる */}
       {/* <div tw="mx-auto">
         <Tab />
       </div> */}
