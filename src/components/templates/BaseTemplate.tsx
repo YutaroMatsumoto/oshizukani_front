@@ -25,12 +25,7 @@ export const BaseTemplate = ({ children }: React.PropsWithChildren<Props>) => {
   return (
     <div tw="h-full bg-gray-100">
       <Header />
-      <div tw="pt-16 h-full">
-        {children}
-        {/* <button onClick={() => setState(state + 1)}>テスト</button> */}
-      </div>
-
-      {/* <Footer /> */}
+      <div tw="pt-16 h-full flex justify-center items-center">{children}</div>
     </div>
   );
 };
