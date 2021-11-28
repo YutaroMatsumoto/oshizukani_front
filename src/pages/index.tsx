@@ -1,8 +1,8 @@
 import "twin.macro";
 import { useState } from "react";
-import { NowMtg } from "src/components/molecules/home/NowMtg";
-import { SuggestUserRegistration } from "src/components/molecules/home/SuggestUserRegistration";
-import { SuggestApiLink } from "src/components/molecules/home/SuggestApiLink";
+import { NowMtg } from "src/components/molecules/Home/NowMtg";
+import { SuggestUserRegistration } from "src/components/molecules/Home/SuggestUserRegistration";
+import { SuggestApiLink } from "src/components/molecules/Home/SuggestApiLink";
 
 const Home = () => {
   const [isUserRegistered, setIsUserRegistered] = useState<boolean>(true);
