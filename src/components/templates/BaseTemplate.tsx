@@ -1,6 +1,6 @@
 import "twin.macro";
-import React, { useMemo, useState } from "react";
-import { Footer } from "src/components/organisms/Footer";
+import React from "react";
+// import { Footer } from "src/components/organisms/Footer";
 import { Header } from "src/components/organisms/Header";
 
 interface Props {

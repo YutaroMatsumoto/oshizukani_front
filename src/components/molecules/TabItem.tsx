@@ -1,6 +1,5 @@
 import tw from "twin.macro";
 import Link from "next/link";
-import { useState } from "react";
 
 interface Props {
   content: string;
