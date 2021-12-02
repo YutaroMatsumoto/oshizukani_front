@@ -69,3 +69,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - gitmoji を利用
 - gitmoji を利用しない場合は add, modify, fix などのタグをつける
+
+# type か interface か
+
+正直どちらか良いか分からない。
+が、以下の記事を見る限りは type が良い？
+当プロダクトではいったんあまり気にせず interface を使う。
+https://zenn.dev/luvmini511/articles/6c6f69481c2d17
