@@ -76,3 +76,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 が、以下の記事を見る限りは type が良い？
 当プロダクトではいったんあまり気にせず interface を使う。
 https://zenn.dev/luvmini511/articles/6c6f69481c2d17
+
+# src/components/styles（必要ない可能性あり）
+
+このディレクトリには共通して利用する style を定義する
