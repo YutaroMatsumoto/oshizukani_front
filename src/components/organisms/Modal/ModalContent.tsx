@@ -20,8 +20,9 @@ export const ModalContent = ({ onClick }: Props) => {
         return <MemberModal />;
       case ModalContentState.NOTIFICATION:
         return <NotificationModal />;
-      case ModalContentState.CREATESCHEDULE:
-        return <CreateScheduleModal />;
+      // fase1ではスケジュール追加機能はなしにする
+      // case ModalContentState.CREATESCHEDULE:
+      //   return <CreateScheduleModal />;
       case ModalContentState.LOGOUT:
         return <LogoutModal />;
       case "":
