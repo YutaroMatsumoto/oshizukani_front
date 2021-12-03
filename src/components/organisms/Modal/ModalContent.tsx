@@ -2,7 +2,7 @@ import "twin.macro";
 import { useMemo, useContext } from "react";
 import { ModalContext } from "src/contexts/ModalContextProvider";
 import { NotificationModal } from "src/components/organisms/Modal/ModalContents/NotificationModal";
-import { CreateScheduleModal } from "src/components/organisms/Modal/ModalContents/CreateScheduleModal";
+// import { CreateScheduleModal } from "src/components/organisms/Modal/ModalContents/CreateScheduleModal";
 import { MemberModal } from "src/components/organisms/Modal/ModalContents/MemberModal";
 import { LogoutModal } from "src/components/organisms/Modal/ModalContents/LogoutModal";
 import { ModalContentState } from "src/contexts/ModalContextProvider";
