@@ -13,7 +13,7 @@ export const Modal = () => {
         tw="absolute bg-black bg-opacity-50 inset-0"
         onClick={closeModal}
       ></div>
-      <div tw="h-2/3 w-1/2 z-20 bg-white cursor-default rounded-md">
+      <div tw="h-2/3 w-3/4 max-w-screen-md z-20 bg-white cursor-default rounded-md">
         <div tw="flex h-full">
           <ModalNavbar />
           <ModalContent onClick={() => console.log("modal content")} />
