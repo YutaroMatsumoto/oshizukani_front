@@ -2,12 +2,12 @@ import "twin.macro";
 import { useContext, useCallback } from "react";
 import { Button } from "src/components/molecules/Button";
 import { Tab } from "src/components/organisms/Tab";
-import { IconButton, IconType } from "src/components/molecules/IconButton";
 import { Modal } from "src/components/organisms/Modal/Modal";
 import {
   ModalContext,
   useModalDispatchContext,
 } from "src/contexts/ModalContextProvider";
+import { RiUserSettingsFill } from "react-icons/ri";
 
 export const Header = () => {
   const auth = true; // 暫定対応
@@ -30,12 +30,14 @@ export const Header = () => {
       <div tw="ml-auto">
         <div tw="flex items-center cursor-pointer">
           {auth ? (
-            <IconButton
-              type={IconType.SETTING}
-              color="#065f46"
-              size={25}
-              onClick={showMember}
-            />
+            <div>
+              <div
+                tw="fill-current text-gray-400 hover:text-green-400"
+                onClick={showMember}
+              >
+                <RiUserSettingsFill size={25} />
+              </div>
+            </div>
           ) : (
             <Button text="ログイン" onClick={() => console.log("Login")} />
           )}
