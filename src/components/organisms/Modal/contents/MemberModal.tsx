@@ -1,12 +1,13 @@
-import { UserApiSettingForm } from "src/components/organisms/form/UserForm";
-import "twin.macro";
+import 'twin.macro';
+import { UserApiSettingForm } from 'src/components/organisms/form/UserApiSettingForm';
 
 export const MemberModal = () => {
   return (
     <>
       <div>Member Modal</div>
-      <input />
-      <UserApiSettingForm />
+      <div tw="h-125 mt-6">
+        <UserApiSettingForm />
+      </div>
     </>
   );
 };
