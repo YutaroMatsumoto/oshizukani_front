@@ -32,7 +32,7 @@ export const ModalContent = ({ onClick }: Props) => {
   }, [context]);
   return (
     <div tw="w-full pt-6 px-14">
-      <div>{contentType}</div>
+      <div tw="h-full">{contentType}</div>
     </div>
   );
 };
