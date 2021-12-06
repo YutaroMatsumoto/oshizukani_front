@@ -1,11 +1,11 @@
-import "twin.macro";
-import { useMemo, useContext } from "react";
-import { ModalContext } from "src/contexts/ModalContextProvider";
-import { NotificationModal } from "src/components/organisms/modal/contents/NotificationModal";
+import 'twin.macro';
+import { useMemo, useContext } from 'react';
+import { ModalContext } from 'src/contexts/ModalContextProvider';
+import { NotificationModal } from 'src/components/organisms/modal/contents/NotificationModal';
 // import { CreateScheduleModal } from "src/components/organisms/Modal/ModalContents/CreateScheduleModal";
-import { MemberModal } from "src/components/organisms/modal/contents/MemberModal";
-import { LogoutModal } from "src/components/organisms/modal/contents/LogoutModal";
-import { ModalContentState } from "src/contexts/ModalContextProvider";
+import { MemberModal } from 'src/components/organisms/modal/contents/MemberModal';
+import { LogoutModal } from 'src/components/organisms/modal/contents/LogoutModal';
+import { ModalContentState } from 'src/contexts/ModalContextProvider';
 
 interface Props {
   onClick?: () => void;
@@ -25,14 +25,14 @@ export const ModalContent = ({ onClick }: Props) => {
       //   return <CreateScheduleModal />;
       case ModalContentState.LOGOUT:
         return <LogoutModal />;
-      case "":
+      case '':
       default:
         return;
     }
   }, [context]);
   return (
     <div tw="w-full pt-6 px-14">
-      <div tw="cursor-pointer">{contentType}</div>
+      <div>{contentType}</div>
     </div>
   );
 };
