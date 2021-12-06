@@ -1,7 +1,7 @@
 import "twin.macro";
 import { useCallback } from "react";
-import { ModalNavbar } from "src/components/organisms/Modal/ModalNavbar";
-import { ModalContent } from "src/components/organisms/Modal/ModalContent";
+import { ModalNavbar } from "src/components/organisms/modal/ModalNavbar";
+import { ModalContent } from "src/components/organisms/modal/ModalContent";
 import { useModalDispatchContext } from "src/contexts/ModalContextProvider";
 
 export const Modal = () => {
