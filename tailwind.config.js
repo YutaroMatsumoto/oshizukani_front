@@ -6,6 +6,10 @@ module.exports = {
       height: {
         100: '25rem',
         125: '31.25rem',
+        150: '37.5rem', // 600px
+      },
+      width: {
+        187: '46.75rem', // 748px
       },
     },
   },
