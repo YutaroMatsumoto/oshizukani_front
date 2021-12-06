@@ -1,25 +1,25 @@
-import "twin.macro";
-import { useContext, useCallback } from "react";
-import { Button } from "src/components/molecules/Button";
-import { Tab } from "src/components/organisms/Tab";
-import { Modal } from "src/components/organisms/modal/Modal";
+import 'twin.macro';
+import { useContext, useCallback } from 'react';
+import { Button } from 'src/components/molecules/Button';
+// import { Tab } from 'src/components/organisms/Tab';
+import { Modal } from 'src/components/organisms/modal/Modal';
 import {
   ModalContext,
   useModalDispatchContext,
-} from "src/contexts/ModalContextProvider";
-import { RiUserSettingsFill } from "react-icons/ri";
+} from 'src/contexts/ModalContextProvider';
+import { RiUserSettingsFill } from 'react-icons/ri';
 
 export const Header = () => {
   const auth = true; // 暫定対応
   const context = useContext(ModalContext);
   const modalDispatch = useModalDispatchContext();
-  const showMember = useCallback(() => modalDispatch({ type: "member" }), []);
+  const showMember = useCallback(() => modalDispatch({ type: 'member' }), []);
 
   return (
     <header tw="flex items-center py-4 px-14 w-full h-16 fixed bg-white z-10">
       <div
         tw="flex items-center font-black text-green-400 cursor-pointer"
-        onClick={() => console.log("Click Logo")}
+        onClick={() => console.log('Click Logo')}
       >
         oshizukani
       </div>
@@ -30,16 +30,14 @@ export const Header = () => {
       <div tw="ml-auto">
         <div tw="flex items-center cursor-pointer">
           {auth ? (
-            <div>
-              <div
-                tw="fill-current text-gray-400 hover:text-green-400"
-                onClick={showMember}
-              >
-                <RiUserSettingsFill size={25} />
-              </div>
+            <div
+              tw="fill-current text-gray-400 hover:text-green-400"
+              onClick={showMember}
+            >
+              <RiUserSettingsFill size={25} />
             </div>
           ) : (
-            <Button text="ログイン" onClick={() => console.log("Login")} />
+            <Button title="ログイン" onClick={() => console.log('Login')} />
           )}
           {context.visible && <Modal />}
         </div>
