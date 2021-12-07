@@ -1,10 +1,10 @@
 import 'twin.macro';
 import { useMemo, useContext } from 'react';
 import { ModalContext } from 'src/contexts/ModalContextProvider';
-import { NotificationModal } from 'src/components/organisms/modals/contents/NotificationModal';
+import { NotificationModal } from 'src/components/organisms/modal/contents/NotificationModal';
 // import { CreateScheduleModal } from "src/components/organisms/Modal/ModalContents/CreateScheduleModal";
-import { MemberModal } from 'src/components/organisms/modals/contents/MemberModal';
-import { LogoutModal } from 'src/components/organisms/modals/contents/LogoutModal';
+import { MemberModal } from 'src/components/organisms/modal/contents/MemberModal';
+import { LogoutModal } from 'src/components/organisms/modal/contents/LogoutModal';
 import { ModalContentState } from 'src/contexts/ModalContextProvider';
 
 interface Props {

@@ -1,6 +1,6 @@
 import 'twin.macro';
 import { useCallback } from 'react';
-import { NavbarItem } from 'src/components/organisms/modals/NavbarItem';
+import { NavbarItem } from 'src/components/organisms/modal/NavbarItem';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { BiCalendarPlus } from 'react-icons/bi';
 import { BsPeople } from 'react-icons/bs';
