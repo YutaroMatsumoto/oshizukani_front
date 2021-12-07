@@ -19,7 +19,7 @@ export const UserApiSettingArrayField = ({
   return (
     // Controllerにrenderが必須になっている？
     <div tw="flex items-center" css={[index !== 0 && tw`mt-8`]}>
-      {/* <div tw="w-full">
+      <div tw="w-full">
         <FormField label="名前">
           <Controller
             render={({ field }) => (
@@ -41,7 +41,7 @@ export const UserApiSettingArrayField = ({
       </div>
       <div tw="ml-4 cursor-pointer" onClick={() => removeField(index)}>
         <IoPersonRemove size={20} />
-      </div> */}
+      </div>
     </div>
   );
 };
