@@ -13,7 +13,7 @@ export const FormField = ({
 }: React.PropsWithChildren<Props>) => {
   return (
     <div tw="flex items-center" className={className}>
-      <label tw="font-bold w-28">{label}</label>
+      <label tw="font-medium w-28">{label}</label>
       <div tw="ml-4 w-full">{children}</div>
     </div>
   );
