@@ -1,8 +1,8 @@
 import tw from 'twin.macro';
 import { Control, Controller } from 'react-hook-form';
 import { UserApiSettingForm } from 'src/components/organisms/form/UserApiSettingForm';
-import { TextInputField } from 'src/components/molecules/form/TextInputField';
-import { FormField } from 'src/components/molecules/form/FormField';
+import { TextInputField } from 'src/components/molecules/Forms/TextInputField';
+import { FormField } from 'src/components/molecules/Forms/FormField';
 import { IoPersonRemove } from 'react-icons/io5';
 
 interface Props {
