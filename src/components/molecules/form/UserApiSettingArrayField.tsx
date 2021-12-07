@@ -1,8 +1,8 @@
 import tw from 'twin.macro';
 import { Control, Controller } from 'react-hook-form';
 import { UserApiSettingForm } from 'src/components/organisms/form/UserApiSettingForm';
-import { TextInputField } from 'src/components/molecules/Forms/TextInputField';
-import { FormField } from 'src/components/molecules/Forms/FormField';
+import { TextInput } from 'src/components/molecules/form/TextInput';
+import { FormField } from 'src/components/molecules/form/FormField';
 import { IoPersonRemove } from 'react-icons/io5';
 
 interface Props {
@@ -23,7 +23,7 @@ export const UserApiSettingArrayField = ({
         <FormField label="名前">
           <Controller
             render={({ field }) => (
-              <TextInputField value={field.value} onChange={field.onChange} />
+              <TextInput value={field.value} onChange={field.onChange} />
             )}
             name={`useApiSettings.${index}.userName`}
             control={control}
@@ -32,7 +32,7 @@ export const UserApiSettingArrayField = ({
         <FormField label="GoogleAPI" tw="mt-2">
           <Controller
             render={({ field }) => (
-              <TextInputField value={field.value} onChange={field.onChange} />
+              <TextInput value={field.value} onChange={field.onChange} />
             )}
             name={`useApiSettings.${index}.googleApi`}
             control={control}
