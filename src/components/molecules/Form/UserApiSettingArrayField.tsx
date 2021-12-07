@@ -18,7 +18,7 @@ export const UserApiSettingArrayField = ({
 }: Props) => {
   return (
     // Controllerにrenderが必須になっている？
-    <div tw="flex items-center" css={[index !== 0 && tw`mt-4`]}>
+    <div tw="flex items-center" css={[index !== 0 && tw`mt-8`]}>
       <div tw="w-full">
         <FormField label="名前">
           <Controller
