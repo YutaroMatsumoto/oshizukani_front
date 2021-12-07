@@ -2,7 +2,7 @@ import 'twin.macro';
 import { useContext, useCallback } from 'react';
 import { Button } from 'src/components/molecules/Button';
 // import { Tab } from 'src/components/organisms/Tab';
-import { Modal } from 'src/components/organisms/modal/Modal';
+import { Modal } from 'src/components/organisms/modals/Modal';
 import {
   ModalContext,
   useModalDispatchContext,

@@ -1,37 +1,37 @@
-import "twin.macro";
-import { useCallback } from "react";
-import { NavbarItem } from "src/components/organisms/modal/NavbarItem";
-import { IoMdNotificationsOutline } from "react-icons/io";
-import { BiCalendarPlus } from "react-icons/bi";
-import { BsPeople } from "react-icons/bs";
-import { RiLogoutBoxRLine } from "react-icons/ri";
+import 'twin.macro';
+import { useCallback } from 'react';
+import { NavbarItem } from 'src/components/organisms/modals/NavbarItem';
+import { IoMdNotificationsOutline } from 'react-icons/io';
+import { BiCalendarPlus } from 'react-icons/bi';
+import { BsPeople } from 'react-icons/bs';
+import { RiLogoutBoxRLine } from 'react-icons/ri';
 import {
   ModalContentState,
   ModalContentStateLabel,
-} from "src/contexts/ModalContextProvider";
+} from 'src/contexts/ModalContextProvider';
 import {
   useModalDispatchContext,
   ModalContext,
-} from "src/contexts/ModalContextProvider";
-import { useContext } from "react";
+} from 'src/contexts/ModalContextProvider';
+import { useContext } from 'react';
 
 export const ModalNavbar = () => {
   const modalType = useContext(ModalContext);
   const modalDispatch = useModalDispatchContext();
 
-  const showMember = useCallback(() => modalDispatch({ type: "member" }), []);
+  const showMember = useCallback(() => modalDispatch({ type: 'member' }), []);
 
   const showCreateSchedule = useCallback(
-    () => modalDispatch({ type: "createSchedule" }),
+    () => modalDispatch({ type: 'createSchedule' }),
     []
   );
 
   const showNotification = useCallback(
-    () => modalDispatch({ type: "notification" }),
+    () => modalDispatch({ type: 'notification' }),
     []
   );
 
-  const showLogout = useCallback(() => modalDispatch({ type: "logout" }), []);
+  const showLogout = useCallback(() => modalDispatch({ type: 'logout' }), []);
 
   return (
     <div tw="w-48 pt-2.5 bg-gray-100 rounded-l-md">
