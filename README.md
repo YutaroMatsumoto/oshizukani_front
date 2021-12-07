@@ -80,3 +80,7 @@ https://zenn.dev/luvmini511/articles/6c6f69481c2d17
 # src/components/styles（必要ない可能性あり）
 
 このディレクトリには共通して利用する style を定義する
+
+# 2021 年 12 月 7 日気づいたこと
+
+フォルダ名を大文字から小文字にする（逆も然り）だけの修正だと git が検知してくれない
