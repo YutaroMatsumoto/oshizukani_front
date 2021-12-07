@@ -16,6 +16,11 @@
     "baseUrl": "."
   },
   "files": ["src/types/twin.d.ts"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/molecules/form/TextInputField.tsx"
+  ],
   "exclude": ["node_modules"]
 }
