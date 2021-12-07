@@ -31,7 +31,7 @@ export const Header = () => {
         <div tw="flex items-center cursor-pointer">
           {auth ? (
             <div
-              tw="fill-current text-gray-400 hover:text-green-400"
+              tw="fill-current text-gray-400 transition hover:text-green-400"
               onClick={showMember}
             >
               <RiUserSettingsFill size={25} />
