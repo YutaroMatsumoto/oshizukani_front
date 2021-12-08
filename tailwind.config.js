@@ -11,6 +11,7 @@ module.exports = {
         150: '37.5rem', // 600px
       },
       width: {
+        92: '23rem',
         187: '46.75rem', // 748px
       },
     },
