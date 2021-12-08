@@ -14,7 +14,7 @@ export const ModalContentTemplate = ({
     <>
       <div tw="font-semibold">{title}</div>
       <Divider />
-      <div tw="h-120 mt-6">{children}</div>
+      <div tw="h-124 mt-6">{children}</div>
     </>
   );
 };
