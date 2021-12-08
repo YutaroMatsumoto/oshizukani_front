@@ -3,7 +3,7 @@ import { useForm, useFieldArray } from 'react-hook-form';
 import { UserApiSettingArrayField } from 'src/components/molecules/form/UserApiSettingArrayField';
 import { Divider } from 'src/components/molecules/Divider';
 import { Button } from 'src/components/molecules/Button';
-import { IoPersonAdd } from 'react-icons/io5';
+import { IoAlertCircleOutline, IoPersonAdd } from 'react-icons/io5';
 
 type UserApiSetting = {
   userName: string;
@@ -40,7 +40,7 @@ export const UserApiSettingForm = () => {
 
   return (
     <form tw="relative h-full" onSubmit={handleSubmit(doSubmit)}>
-      <div tw="h-100 overflow-scroll px-6">
+      <div tw="h-96 overflow-scroll px-6 py-6 bg-gray-50">
         {fields.map((field, index) => (
           <UserApiSettingArrayField
             control={control}
@@ -53,15 +53,26 @@ export const UserApiSettingForm = () => {
 
       <div tw="absolute bottom-0 w-full">
         <Divider />
-        <div tw="flex float-right">
-          <Button
-            title="追加"
-            icon={<IoPersonAdd size={18} />}
-            black
-            onClick={addField}
-          />
-          <Button tw="ml-4" title="保存" onClick={() => doSubmit} />
+        <div tw="flex items-center">
+          <div tw="flex ml-auto">
+            <Button
+              tw="w-28"
+              title="追加"
+              icon={<IoPersonAdd size={18} />}
+              black
+              onClick={addField}
+            />
+            <Button tw="w-28 ml-4" title="保存" onClick={() => doSubmit} />
+          </div>
         </div>
+        <p tw="flex items-center w-92 ml-auto mt-4 text-sm">
+          <div tw="fill-current text-red-600">
+            <IoAlertCircleOutline size={18} />
+          </div>
+          <span tw="ml-2">
+            更新は保存ボタンを押下することでのみ実行されます
+          </span>
+        </p>
       </div>
     </form>
   );
