@@ -14,7 +14,7 @@ export const Button = ({ className, title, icon, black, onClick }: Props) => {
 
   return (
     <button
-      tw="flex items-center h-9 px-5 rounded-lg border-2  bg-white"
+      tw="flex items-center justify-center h-9 px-5 rounded-lg border-2  bg-white"
       css={[
         black ? tw`border-black ` : tw`border-green-400`,
         isHover && black && tw`transition bg-black`,
