@@ -55,12 +55,20 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## カレンダー
 
 - react-calendar
-- FullCalendar（今回採用）
+- FullCalendar（採用）
 
 ## form
 
-- react-hook-form（今回採用予定）
+- react-hook-form（採用）
 - react-final-form
+
+## css
+
+- tailwind（採用）
+  　 → css ファイルを用意する必要がなくなる、class を指定する必要がなくなる
+- twin.macro（採用）
+  　 - styled-component と組み合わせて利用する？
+  　 - 今回は className を tw に省略できるかくらいかもだが、勉強も兼ねて入れた！
 
 </br>
 </br>
