@@ -12,7 +12,7 @@ export const ModalContentTemplate = ({
 }: React.PropsWithChildren<Props>) => {
   return (
     <>
-      <div tw="font-semibold">{title}</div>
+      <div tw="px-2 font-semibold">{title}</div>
       <Divider />
       <div tw="h-124 mt-6">{children}</div>
     </>
