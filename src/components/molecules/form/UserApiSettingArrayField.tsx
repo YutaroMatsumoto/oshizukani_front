@@ -23,7 +23,11 @@ export const UserApiSettingArrayField = ({
         <FormField label="名前">
           <Controller
             render={({ field }) => (
-              <TextInput value={field.value} onChange={field.onChange} />
+              <TextInput
+                tw="w-82"
+                value={field.value}
+                onChange={field.onChange}
+              />
             )}
             name={`useApiSettings.${index}.userName`}
             control={control}
@@ -32,16 +36,22 @@ export const UserApiSettingArrayField = ({
         <FormField label="GoogleAPI" tw="mt-2">
           <Controller
             render={({ field }) => (
-              <TextInput value={field.value} onChange={field.onChange} />
+              <TextInput
+                tw="w-82"
+                value={field.value}
+                onChange={field.onChange}
+              />
             )}
             name={`useApiSettings.${index}.googleApi`}
             control={control}
           />
         </FormField>
       </div>
-      <div tw="ml-4 cursor-pointer" onClick={() => removeField(index)}>
-        <IoPersonRemove size={20} />
-      </div>
+      {index > 0 && (
+        <div tw="ml-4 cursor-pointer" onClick={() => removeField(index)}>
+          <IoPersonRemove size={20} />
+        </div>
+      )}
     </div>
   );
 };
