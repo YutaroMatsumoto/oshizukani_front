@@ -56,13 +56,14 @@ export const UserApiSettingForm = () => {
         <div tw="flex items-center">
           <div tw="flex ml-auto">
             <Button
-              tw="w-28"
-              title="追加"
+              tw="w-48"
+              title={`追加（${fields.length}/20）`}
               icon={<IoPersonAdd size={18} />}
               black
+              disable={fields.length > 19}
               onClick={addField}
             />
-            <Button tw="w-28 ml-4" title="保存" onClick={() => doSubmit} />
+            <Button tw="w-48 ml-4" title="保存" onClick={() => doSubmit} />
           </div>
         </div>
         <p tw="flex items-center w-92 ml-auto mt-4 text-sm">
