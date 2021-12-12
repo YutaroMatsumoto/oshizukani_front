@@ -1,5 +1,11 @@
-import "twin.macro";
+import 'twin.macro';
+import { NotificationForm } from 'src/components/organisms/form/NotificationForm';
+import { ModalContentTemplate } from 'src/components/templates/ModalContentTemplate';
 
 export const NotificationModal = () => {
-  return <div>Notification Modal</div>;
+  return (
+    <ModalContentTemplate title="通知設定">
+      <NotificationForm />
+    </ModalContentTemplate>
+  );
 };

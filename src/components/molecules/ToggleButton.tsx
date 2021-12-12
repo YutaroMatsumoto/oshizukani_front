@@ -3,13 +3,19 @@ import tw, { css } from 'twin.macro';
 type Props = {
   toggleOn: boolean;
   onClick: () => void;
+  onSubmit?: () => void;
 };
 
 // 単純なButtonであり、formではない。今後問題ないか検討。
 // toggleのstateは呼び出し側で管理する
-export const ToggleButton = ({ toggleOn, onClick }: Props) => {
+export const ToggleButton = ({ toggleOn, onClick, onSubmit }: Props) => {
   return (
-    <button onClick={onClick}>
+    <button
+      onClick={() => {
+        onClick();
+        onSubmit && onSubmit();
+      }}
+    >
       <div tw="cursor-pointer">
         <div
           tw="items-center w-12 p-1 bg-gray-200 rounded-3xl transition"
