@@ -12,18 +12,18 @@ export const ToggleButton = ({ toggleOn, onClick }: Props) => {
     <button onClick={onClick}>
       <div tw="cursor-pointer">
         <div
-          tw="items-center w-12 p-1 bg-green-400 rounded-3xl transition"
-          css={[toggleOn && tw`transition bg-gray-200`]}
+          tw="items-center w-12 p-1 bg-gray-200 rounded-3xl transition"
+          css={[toggleOn && tw`transition bg-green-400`]}
         >
           <div
             tw="w-4 h-4 bg-white rounded-3xl transition-transform ease-in-out"
             css={[
               toggleOn
                 ? css`
-                    transform: translateX(0px) translateY(0px);
+                    transform: translateX(24px) translateY(0px);
                   `
                 : css`
-                    transform: translateX(24px) translateY(0px);
+                    transform: translateX(0px) translateY(0px);
                   `,
             ]}
           />
