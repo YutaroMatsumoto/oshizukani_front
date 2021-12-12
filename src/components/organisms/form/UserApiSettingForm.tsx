@@ -67,9 +67,7 @@ export const UserApiSettingForm = () => {
           </div>
         </div>
         <div tw="flex items-center w-92 ml-auto mt-4 text-sm">
-          <div tw="fill-current text-red-600">
-            <IoAlertCircleOutline size={18} />
-          </div>
+          <IoAlertCircleOutline tw="fill-current text-red-600" size={18} />
           <span tw="ml-2">
             更新は保存ボタンを押下することでのみ実行されます
           </span>

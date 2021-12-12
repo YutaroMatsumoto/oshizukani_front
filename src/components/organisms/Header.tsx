@@ -30,12 +30,11 @@ export const Header = () => {
       <div tw="ml-auto">
         <div tw="flex items-center cursor-pointer">
           {auth ? (
-            <div
+            <RiUserSettingsFill
               tw="fill-current text-gray-400 transition hover:text-green-400"
               onClick={showMember}
-            >
-              <RiUserSettingsFill size={25} />
-            </div>
+              size={25}
+            />
           ) : (
             <Button title="ログイン" onClick={() => console.log('Login')} />
           )}
