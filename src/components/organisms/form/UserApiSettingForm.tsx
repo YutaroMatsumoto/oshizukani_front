@@ -66,14 +66,14 @@ export const UserApiSettingForm = () => {
             <Button tw="w-48 ml-4" title="保存" onClick={() => doSubmit} />
           </div>
         </div>
-        <p tw="flex items-center w-92 ml-auto mt-4 text-sm">
+        <div tw="flex items-center w-92 ml-auto mt-4 text-sm">
           <div tw="fill-current text-red-600">
             <IoAlertCircleOutline size={18} />
           </div>
           <span tw="ml-2">
             更新は保存ボタンを押下することでのみ実行されます
           </span>
-        </p>
+        </div>
       </div>
     </form>
   );
