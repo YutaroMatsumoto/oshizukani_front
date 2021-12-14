@@ -4,7 +4,7 @@ import { ModalContext } from 'src/contexts/ModalContextProvider';
 import { NotificationModal } from 'src/components/organisms/modal/contents/NotificationModal';
 // import { CreateScheduleModal } from "src/components/organisms/Modal/ModalContents/CreateScheduleModal";
 import { MemberModal } from 'src/components/organisms/modal/contents/MemberModal';
-import { LogoutModal } from 'src/components/organisms/modal/contents/LogoutModal';
+import { AccountInfoModal } from 'src/components/organisms/modal/contents/AccountInfoModal';
 import { ModalContentState } from 'src/contexts/ModalContextProvider';
 
 interface Props {
@@ -16,6 +16,8 @@ export const ModalContent = ({ onClick }: Props) => {
 
   const contentType = useMemo(() => {
     switch (context.type) {
+      case ModalContentState.ACCOUNT:
+        return <AccountInfoModal />;
       case ModalContentState.MEMBER:
         return <MemberModal />;
       case ModalContentState.NOTIFICATION:
@@ -23,8 +25,6 @@ export const ModalContent = ({ onClick }: Props) => {
       // fase1ではスケジュール追加機能はなしにする
       // case ModalContentState.CREATESCHEDULE:
       //   return <CreateScheduleModal />;
-      case ModalContentState.LOGOUT:
-        return <LogoutModal />;
       case '':
       default:
         return;

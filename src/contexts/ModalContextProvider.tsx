@@ -1,20 +1,20 @@
-import React, { createContext, Dispatch, useContext, useReducer } from "react";
+import React, { createContext, Dispatch, useContext, useReducer } from 'react';
 
 export const ModalContentState = {
-  DEFAULT: "",
-  NOTIFICATION: "notification",
-  CREATESCHEDULE: "createSchedule",
-  MEMBER: "member",
-  LOGOUT: "logout",
+  DEFAULT: '',
+  ACCOUNT: 'account',
+  NOTIFICATION: 'notification',
+  CREATESCHEDULE: 'createSchedule',
+  MEMBER: 'member',
 } as const;
 export type ModalContentStateType =
   typeof ModalContentState[keyof typeof ModalContentState];
 
 export const ModalContentStateLabel = {
-  notification: "通知",
+  account: 'アカウント情報',
+  notification: '通知',
   // createSchedule: "予定作成",
-  member: "メンバー",
-  logout: "ログアウト",
+  member: 'メンバー管理',
 } as const;
 export type ModalContentStateLabelType =
   typeof ModalContentStateLabel[keyof typeof ModalContentStateLabel];
@@ -34,21 +34,26 @@ const initialState: ModalContentTypeState = {
 };
 
 type ModalContextAction =
-  | { type: "default" }
-  | { type: "notification" }
-  | { type: "createSchedule" }
-  | { type: "member" }
-  | { type: "logout" }
-  | { type: "close" };
+  | { type: 'default' }
+  | { type: 'account' }
+  | { type: 'notification' }
+  | { type: 'createSchedule' }
+  | { type: 'member' }
+  | { type: 'close' };
 
 const reducer = (state: ModalContentTypeState, action: ModalContextAction) => {
   switch (action.type) {
-    case "default":
+    case 'default':
       return {
         visible: true,
         type: ModalContentState.DEFAULT,
       };
-    case "notification":
+    case 'account':
+      return {
+        visible: true,
+        type: ModalContentState.ACCOUNT,
+      };
+    case 'notification':
       return {
         visible: true,
         type: ModalContentState.NOTIFICATION,
@@ -58,23 +63,19 @@ const reducer = (state: ModalContentTypeState, action: ModalContextAction) => {
     //     visible: true,
     //     type: ModalContentState.CREATESCHEDULE,
     //   };
-    case "member":
+    case 'member':
       return {
         visible: true,
         type: ModalContentState.MEMBER,
       };
-    case "logout":
-      return {
-        visible: true,
-        type: ModalContentState.LOGOUT,
-      };
-    case "close":
+
+    case 'close':
       return {
         visible: false,
         type: ModalContentState.DEFAULT,
       };
     default:
-      console.log("reducer: unexpected action type");
+      console.log('reducer: unexpected action type');
       return state;
   }
 };
@@ -88,7 +89,7 @@ export const ModalDispatchContext = createContext<
 export const useModalDispatchContext = () => {
   const context = useContext(ModalDispatchContext);
   if (context === undefined) {
-    console.log("error: context is undefined");
+    console.log('error: context is undefined');
     throw new Error();
   }
   return context;
