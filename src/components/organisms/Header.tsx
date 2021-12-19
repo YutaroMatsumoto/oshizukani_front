@@ -13,7 +13,7 @@ export const Header = () => {
   const auth = true; // 暫定対応
   const context = useContext(ModalContext);
   const modalDispatch = useModalDispatchContext();
-  const showMember = useCallback(() => modalDispatch({ type: 'member' }), []);
+  const showMember = useCallback(() => modalDispatch({ type: 'account' }), []);
 
   return (
     <header tw="flex items-center py-4 px-14 w-full h-16 fixed bg-white z-10">
