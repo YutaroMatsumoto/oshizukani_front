@@ -1,9 +1,9 @@
-import 'twin.macro';
-import { useEffect, useState } from 'react';
-import { ToggleField } from 'src/components/molecules/form/ToggleField';
+import 'twin.macro'
+import { useState } from 'react'
+import { ToggleField } from 'src/components/molecules/form/ToggleField'
 
 export const NotificationForm = () => {
-  const [isNotice, setIsNotice] = useState<boolean>(false);
+  const [isNotice, setIsNotice] = useState<boolean>(false)
 
   return (
     <div tw="px-6">
@@ -15,5 +15,5 @@ export const NotificationForm = () => {
         helpMessage="会議が開始されたらプッシュ通知を受け取ります。"
       />
     </div>
-  );
-};
+  )
+}

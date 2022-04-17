@@ -2,6 +2,17 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      white: '#FFFFFF',
+      black: '#000000',
+      lightGreen: '#4ade80',
+      gray5: '#f9fafb',
+      gray10: '#f3f4f6',
+      gray30: '#d1d5db',
+      gray20: '#dce7eb',
+      gray40: '#9ca3af',
+      red: '#dc2626',
+    },
     extend: {
       height: {
         100: '25rem',
@@ -23,4 +34,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-};
+}

@@ -1,10 +1,10 @@
-import "twin.macro";
-import React from "react";
+import 'twin.macro'
+import React from 'react'
 // import { Footer } from "src/components/organisms/Footer";
-import { Header } from "src/components/organisms/Header";
+import { Header } from 'src/components/organisms/Header'
 
 interface Props {
-  test?: string;
+  test?: string
 }
 
 export const BaseTemplate = ({ children }: React.PropsWithChildren<Props>) => {
@@ -23,9 +23,9 @@ export const BaseTemplate = ({ children }: React.PropsWithChildren<Props>) => {
   // console.log("testmemoを表示：", testMemo);
 
   return (
-    <div tw="h-full bg-gray-100">
+    <div tw="h-full bg-gray10">
       <Header />
       <div tw="pt-16 h-full flex justify-center items-center">{children}</div>
     </div>
-  );
-};
+  )
+}

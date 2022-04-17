@@ -1,46 +1,46 @@
-import 'twin.macro';
-import { useForm, useFieldArray } from 'react-hook-form';
-import { UserApiSettingArrayField } from 'src/components/molecules/form/UserApiSettingArrayField';
-import { Divider } from 'src/components/molecules/Divider';
-import { Button } from 'src/components/molecules/Button';
-import { IoAlertCircleOutline, IoPersonAdd } from 'react-icons/io5';
+import 'twin.macro'
+import { useForm, useFieldArray } from 'react-hook-form'
+import { UserApiSettingArrayField } from 'src/components/molecules/form/UserApiSettingArrayField'
+import { Divider } from 'src/components/molecules/Divider'
+import { Button } from 'src/components/molecules/Button'
+import { IoAlertCircleOutline, IoPersonAdd } from 'react-icons/io5'
 
 type UserApiSetting = {
-  userName: string;
-  googleApi: string;
-};
+  userName: string
+  googleApi: string
+}
 
 export type UserApiSettingForm = {
-  useApiSettings: UserApiSetting[];
-};
+  useApiSettings: UserApiSetting[]
+}
 
 export const UserApiSettingForm = () => {
   const { handleSubmit, control } = useForm<UserApiSettingForm>({
     defaultValues: {
       useApiSettings: [{ userName: '', googleApi: '' }],
     },
-  });
+  })
 
   const { fields, append, remove } = useFieldArray({
     control,
     name: 'useApiSettings',
-  });
+  })
 
   const addField = () => {
-    append({ userName: '', googleApi: '' });
-  };
+    append({ userName: '', googleApi: '' })
+  }
 
   const removeField = (index: number) => {
-    remove(index);
-  };
+    remove(index)
+  }
 
   const doSubmit = (data: UserApiSettingForm) => {
-    console.log('data', data);
-  };
+    console.log('data', data)
+  }
 
   return (
     <form tw="relative h-full" onSubmit={handleSubmit(doSubmit)}>
-      <div tw="h-96 overflow-scroll px-6 py-6 bg-gray-50">
+      <div tw="h-96 overflow-scroll px-6 py-6 bg-gray5">
         {fields.map((field, index) => (
           <UserApiSettingArrayField
             control={control}
@@ -67,12 +67,12 @@ export const UserApiSettingForm = () => {
           </div>
         </div>
         <div tw="flex items-center w-92 ml-auto mt-4 text-sm">
-          <IoAlertCircleOutline tw="fill-current text-red-600" size={18} />
+          <IoAlertCircleOutline tw="fill-current text-red" size={18} />
           <span tw="ml-2">
             更新は保存ボタンを押下することでのみ実行されます
           </span>
         </div>
       </div>
     </form>
-  );
-};
+  )
+}
