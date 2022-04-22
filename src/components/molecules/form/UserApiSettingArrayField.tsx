@@ -1,14 +1,14 @@
-import tw from 'twin.macro';
-import { Control, Controller } from 'react-hook-form';
-import { UserApiSettingForm } from 'src/components/organisms/form/UserApiSettingForm';
-import { TextInput } from 'src/components/molecules/form/TextInput';
-import { FormField } from 'src/components/molecules/form/FormField';
-import { IoPersonRemove } from 'react-icons/io5';
+import tw from 'twin.macro'
+import { Control, Controller } from 'react-hook-form'
+import { UserApiSettingForm } from 'src/components/organisms/form/UserApiSettingForm'
+import { TextInput } from 'src/components/molecules/form/TextInput'
+import { FormField } from 'src/components/molecules/form/FormField'
+import { IoPersonRemove } from 'react-icons/io5'
 
 interface Props {
-  control: Control<UserApiSettingForm>;
-  index: number;
-  removeField: (index: number) => void;
+  control: Control<UserApiSettingForm>
+  index: number
+  removeField: (index: number) => void
 }
 
 export const UserApiSettingArrayField = ({
@@ -48,10 +48,10 @@ export const UserApiSettingArrayField = ({
         </FormField>
       </div>
       {index > 0 && (
-        <div tw="ml-4 cursor-pointer" onClick={() => removeField(index)}>
+        <div tw="ml-2 cursor-pointer" onClick={() => removeField(index)}>
           <IoPersonRemove size={20} />
         </div>
       )}
     </div>
-  );
-};
+  )
+}
