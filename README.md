@@ -33,6 +33,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+# env について
+
+https://nextjs-ja-translation-docs.vercel.app/docs/basic-features/environment-variables
+
 # 追加したい機能
 
 - webpush 機能
