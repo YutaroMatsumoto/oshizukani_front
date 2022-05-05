@@ -12,7 +12,7 @@ module.exports = {
       gray30: '#d1d5db',
       gray20: '#dce7eb',
       gray40: '#9ca3af',
-      red: '#dc2626',
+      red: '#f43f5e',
     },
     extend: {
       height: {
