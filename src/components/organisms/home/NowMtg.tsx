@@ -1,3 +1,4 @@
+import React from 'react'
 import 'twin.macro'
 import { BaseTemplate } from 'src/components/templates/BaseTemplate'
 import { RoundMessage } from 'src/components/molecules/RoundMessage'
@@ -7,7 +8,8 @@ interface Props {
   isError: boolean
 }
 
-export const NowMtg = ({ isMtg, isError = false }: Props) => {
+// export const NowMtg = React.memo(() => {})の形だとエラーになる？
+const NowMtg = ({ isMtg, isError = false }: Props) => {
   return (
     <BaseTemplate>
       {isError ? (
@@ -24,3 +26,5 @@ export const NowMtg = ({ isMtg, isError = false }: Props) => {
     </BaseTemplate>
   )
 }
+
+export default React.memo(NowMtg)

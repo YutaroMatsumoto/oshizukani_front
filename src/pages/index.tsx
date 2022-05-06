@@ -1,6 +1,6 @@
 import 'twin.macro'
 import { useEffect, useState } from 'react'
-import { NowMtg } from 'src/components/organisms/home/NowMtg'
+import NowMtg from 'src/components/organisms/home/NowMtg'
 import { getIsNowMtg } from 'src/utils/api'
 import { Loading } from 'src/components/organisms/home/Loading'
 
