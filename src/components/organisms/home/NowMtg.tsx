@@ -1,13 +1,14 @@
 import 'twin.macro'
 import { BaseTemplate } from 'src/components/templates/BaseTemplate'
 import { RoundMessage } from 'src/components/molecules/RoundMessage'
+import React from 'react'
 
 interface Props {
   isMtg: boolean
   isError: boolean
 }
 
-export const NowMtg = ({ isMtg, isError = false }: Props) => {
+export const NowMtg = React.memo(({ isMtg, isError = false }: Props) => {
   return (
     <BaseTemplate>
       {isError ? (
@@ -23,4 +24,4 @@ export const NowMtg = ({ isMtg, isError = false }: Props) => {
       )}
     </BaseTemplate>
   )
-}
+})
