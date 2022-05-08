@@ -12,10 +12,9 @@ const Home = () => {
   // const [isApiLinked, setIsApiLinked] = useState<boolean>(true)
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [isMtg, setIsMtg] = useState<boolean>(false)
-  const [isError, setIsError] = useState<boolean>(true)
+  const [isError, setIsError] = useState<boolean>(false)
 
   const getMtg = () => {
-    setIsError(false)
     getIsNowMtg()
       .then((res) => {
         setIsError(false)
