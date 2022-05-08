@@ -1,6 +1,6 @@
 import tw from 'twin.macro'
 
-interface Props {
+type Props = {
   className?: string
   message: string
   subMessage: string

@@ -2,7 +2,7 @@ import 'twin.macro'
 import React from 'react'
 import { Divider } from 'src/components/molecules/Divider'
 
-interface Props {
+type Props = {
   title?: string
   unavailable?: boolean
 }

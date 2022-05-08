@@ -3,7 +3,7 @@ import 'twin.macro'
 import { BaseTemplate } from 'src/components/templates/BaseTemplate'
 import { RoundMessage } from 'src/components/molecules/RoundMessage'
 
-interface Props {
+type Props = {
   isMtg: boolean
   isError: boolean
 }

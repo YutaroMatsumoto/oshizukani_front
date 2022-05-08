@@ -7,7 +7,7 @@ import { MemberModal } from 'src/components/organisms/modal/contents/MemberModal
 import { AccountInfoModal } from 'src/components/organisms/modal/contents/AccountInfoModal'
 import { ModalContentState } from 'src/contexts/ModalContextProvider'
 
-interface Props {
+type Props = {
   onClick?: () => void
 }
 

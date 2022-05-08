@@ -6,7 +6,7 @@ import {
   ModalContentStateLabel,
 } from 'src/contexts/ModalContextProvider'
 
-interface Props {
+type Props = {
   content: ModalContentStateLabelType
   // contentType: ModalContentStateType;
   icon: React.ReactNode

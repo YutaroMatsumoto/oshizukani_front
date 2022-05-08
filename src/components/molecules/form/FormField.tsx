@@ -1,7 +1,7 @@
 import React from 'react'
 import 'twin.macro'
 
-interface Props {
+type Props = {
   label: string
   className?: string
 }

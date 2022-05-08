@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 import { useState } from 'react'
 
-interface Props {
+type Props = {
   className?: string
   title: string
   icon?: React.ReactNode

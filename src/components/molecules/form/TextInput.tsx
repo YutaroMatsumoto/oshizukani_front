@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-interface Props {
+type Props = {
   value: string
   className?: string
   onChange: () => void

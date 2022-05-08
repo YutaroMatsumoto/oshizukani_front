@@ -3,7 +3,7 @@ import React from 'react'
 import { ToggleButton } from 'src/components/molecules/ToggleButton'
 import { BiHelpCircle } from 'react-icons/bi'
 
-interface Props {
+type Props = {
   toggleOn: boolean
   onClick: () => void
   onSubmit?: () => void

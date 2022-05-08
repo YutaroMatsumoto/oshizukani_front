@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 import Link from 'next/link'
 
-interface Props {
+type Props = {
   content: string
   href: string
   active: boolean

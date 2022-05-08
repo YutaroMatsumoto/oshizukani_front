@@ -5,7 +5,7 @@ import { TextInput } from 'src/components/molecules/form/TextInput'
 import { FormField } from 'src/components/molecules/form/FormField'
 import { IoPersonRemove } from 'react-icons/io5'
 
-interface Props {
+type Props = {
   control: Control<UserApiSettingForm>
   index: number
   removeField: (index: number) => void
