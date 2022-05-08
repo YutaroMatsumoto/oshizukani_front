@@ -84,9 +84,8 @@ https://nextjs-ja-translation-docs.vercel.app/docs/basic-features/environment-va
 
 # type か interface か
 
-正直どちらか良いか分からない。
-が、以下の記事を見る限りは type が良い？
-当プロダクトではいったんあまり気にせず interface を使う。
+Props の定義には type を利用する。
+理由は、宣言のマージによる Props の不本意な拡張を避けるため。
 https://zenn.dev/luvmini511/articles/6c6f69481c2d17
 
 # src/components/styles（必要ない可能性あり）
